@@ -1,0 +1,8 @@
+# ignore everything
+*
+# Recursively allow files under .hooks
+!/.hooks/**
+# Allow .gitignore
+!.gitignore
+# Allow all top-level scripts
+!*.sh
