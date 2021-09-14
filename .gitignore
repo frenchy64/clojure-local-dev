@@ -6,3 +6,5 @@
 !.gitignore
 # Allow all top-level scripts
 !*.sh
+# Allow build script
+!build.yml
