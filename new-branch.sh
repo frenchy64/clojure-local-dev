@@ -10,7 +10,7 @@ if [ -z $BRANCH ]; then
 fi
 
 cd master
-git pull origin master
+git pull clojure master
 git worktree add ../$BRANCH -b $BRANCH master
 
 cd ../$BRANCH
