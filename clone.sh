@@ -2,7 +2,7 @@
 
 set -e
 
-git -C main pull || git clone  https://github.com/clojure/clojure.git --origin clojure --branch master master
+git -C master pull || git clone  https://github.com/clojure/clojure.git --origin clojure --branch master master
 
 cd master
 
