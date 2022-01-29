@@ -10,7 +10,8 @@
 
 set -xe
 
+cp ../deps.edn .
 mvn -Dmaven.test.skip=true clean package
 ./antsetup.sh
 
-clj -A:nrepl:dbg
+clj -M:nrepl:dbg
