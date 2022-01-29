@@ -1,5 +1,8 @@
 #!/bin/sh
 # run in worktree directory
+# eg.,
+#   clojure-branches$ cd my-clj-branch
+#   clojure-branches/my-clj-branch$ ../format-patch.sh
 
 set -e
 

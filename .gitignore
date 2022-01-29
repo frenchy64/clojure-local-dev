@@ -6,5 +6,7 @@
 !.gitignore
 # Allow all top-level scripts
 !*.sh
+# Allow all pom top-level pom.xml files
+!/*pom.xml
 # Allow build script
 !build.yml
