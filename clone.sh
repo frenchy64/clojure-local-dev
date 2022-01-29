@@ -1,14 +1,15 @@
 #!/bin/bash
 # Setup Clojure's master branch in a worktree.
 #
-# Run from this repo's root.
+# First, make sure you've forked Clojure in the same GitHub user as you
+# forked this repository from. Then run from this repo's root.
 #
 # eg., 
 #   $ ./clone.sh
 #
 # Dependencies: Babashka
 
-GITHUB_USER=$(git ls-remote --get-url origin | bb -i '(some->> *input* first (re-matcher #"git@github.com:(.*)/clojure-local-dev.git") re-find second println)')
+GITHUB_USER=$(./github-user.sh)
 #GITHUB_USER=frenchy64
 
 set -e
