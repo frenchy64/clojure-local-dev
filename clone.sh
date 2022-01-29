@@ -9,10 +9,9 @@
 #
 # Dependencies: Babashka
 
-GITHUB_USER=$(./github-user.sh)
-#GITHUB_USER=frenchy64
-
 set -e
+
+GITHUB_USER=$(./github-user.sh)
 
 git -C master pull || git clone https://github.com/clojure/clojure.git --origin clojure --branch master master
 
