@@ -1,5 +1,11 @@
 #!/bin/bash
-# Start an (n)REPL in the current branch.
+# Start an (n)REPL in the current branch. Create your own profile in ~/.clojure/deps.edn
+# with an `:nrepl` alias, eg.,
+#
+# {
+#  :aliases {:nrepl {:extra-deps {nrepl/nrepl {:mvn/version "0.9.0"}}
+#                    :main-opts ["-m" "nrepl.cmdline" "--interactive"]}}
+# }
 #
 # For testing purposes only -- restart the REPL to
 # reload changes to Clojure's src.
@@ -10,8 +16,5 @@
 
 set -xe
 
-cp ../deps.edn .
-mvn -Dmaven.test.skip=true clean package
-./antsetup.sh
-
+../prep-clojure-cli.sh
 clj -M:nrepl:dbg
