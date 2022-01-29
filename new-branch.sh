@@ -16,5 +16,6 @@ git worktree add ../$BRANCH -b $BRANCH master
 cd ../$BRANCH
 mkdir -p .github/workflows
 cp ../build.yml .github/workflows
-git add .github/workflows/build.yml
-git commit -m "Add Actions build"
+cp ../deps.edn .
+git add .github/workflows/build.yml deps.edn
+git commit -m "Add Actions build and deps.edn"

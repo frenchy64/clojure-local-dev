@@ -13,4 +13,4 @@ if [ -z $PATCH_FILE ]; then
   exit 1
 fi
 
-git format-patch master --stdout -U8 -- . ':!.github/workflows/build.yml' > $PATCH_FILE
+git format-patch master --stdout -U8 -- . ':!.github/workflows/build.yml' ':!deps.edn' > $PATCH_FILE
