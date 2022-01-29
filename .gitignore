@@ -8,5 +8,7 @@
 !*.sh
 # Allow all pom top-level pom.xml files
 !/*pom.xml
+# Allow top-level markdown files
+!/*.md
 # Allow build script
 !build.yml
