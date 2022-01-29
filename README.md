@@ -5,7 +5,8 @@ A repo to make Clojure's development process easier for me.
 ## Setup
 
 1. Fork [this repo](https://github.com/frenchy64/clojure-local-dev).
-2. Configure your 
+2. Clone your fork to your machine.
+3. Fork [Clojure](https://github.com/clojure/clojure) to the same GitHub user.
 
 ## Development
 

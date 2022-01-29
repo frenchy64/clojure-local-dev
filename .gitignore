@@ -1,5 +1,7 @@
 # ignore everything
 *
+# ignore user configuration
+github-user.edn
 # Recursively allow files under .hooks
 !/.hooks/**
 # Allow .gitignore
