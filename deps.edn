@@ -14,7 +14,10 @@
               :main-opts ["-m" "cognitect.test-runner"]
               :exec-fn cognitect.test-runner.api/test
               :exec-args {:dirs ["test"]
-                          :patterns [".*"]}}
+                          :patterns [;; FIXME
+                                     ;; regex ref: https://stackoverflow.com/a/2387072
+                                     "^((?!(clojure.test-clojure.ns-libs|clojure.test-clojure.java-interop)).)*$"
+                                     ]}}
   :kaocha {:extra-deps {lambdaisland/kaocha {:mvn/version "1.60.977"}}
            :exec-fn kaocha.runner/exec-fn
            :exec-args {:watch? true
