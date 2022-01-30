@@ -2,4 +2,4 @@
 
 set -xe
 ../prep-clojure-cli.sh
-clojure -X:dbg:kaocha
+clojure -X:kaocha:dbg

@@ -14,5 +14,7 @@ github-user.edn
 !/*.md
 # Allow build script
 !build.yml
+# Allow deps.edn
+!deps.edn
 # Allow extra git ignores
 !extra-gitignore
