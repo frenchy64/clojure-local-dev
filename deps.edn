@@ -7,7 +7,7 @@
   org.clojure/test.check {:mvn/version "1.1.1"}
   org.clojure/test.generative {:mvn/version "1.0.0"}}
  :aliases
- {:dbg {;:classpath-overrides {org.clojure/clojure "target/classes"}
+ {:dbg {:classpath-overrides {org.clojure/clojure "target/classes"}
         :extra-deps {criterium/criterium {:mvn/version "0.4.4"}}}
   :cognitest {:extra-deps {io.github.cognitect-labs/test-runner 
                            {:git/tag "v0.5.0" :git/sha "b3fd0d2"}}
@@ -19,7 +19,8 @@
                                      ;; regex ref: https://stackoverflow.com/a/2387072
                                      "^((?!(clojure.test-clojure.ns-libs|clojure.test-clojure.java-interop)).)*$"
                                      ]}}
-  :test-script {:main-opts ["-e" "(load-file,\"src/script/run_test.clj\")"]}
+  :test-script {:jvm-opts ["-Dclojure.test-clojure.exclude-namespaces=\"#{clojure.test-clojure.compilation.load-ns clojure.test-clojure.ns-libs-load-later}\""]
+                :main-opts ["-e" "(load-file,\"src/script/run_test.clj\")"]}
 
   :kaocha {:extra-deps {lambdaisland/kaocha {:mvn/version "1.60.977"}}
            :exec-fn kaocha.runner/exec-fn
