@@ -1,4 +1,4 @@
 #!/bin/bash
 
 ../prep-clojure-cli.sh
-clojure -M:test-script:dbg
+clojure -M:test-example-script:dbg

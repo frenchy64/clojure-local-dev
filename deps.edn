@@ -19,8 +19,13 @@
                                      ;; regex ref: https://stackoverflow.com/a/2387072
                                      "^((?!(clojure.test-clojure.ns-libs|clojure.test-clojure.java-interop)).)*$"
                                      ]}}
-  :test-script {:jvm-opts ["-Dclojure.test-clojure.exclude-namespaces=\"#{clojure.test-clojure.compilation.load-ns clojure.test-clojure.ns-libs-load-later}\""]
-                :main-opts ["-e" "(load-file,\"src/script/run_test.clj\")"]}
+  :test-example-script {:jvm-opts [;; from build.xml
+                                   "-Dclojure.test-clojure.exclude-namespaces=#{clojure.test-clojure.compilation.load-ns clojure.test-clojure.ns-libs-load-later}"
+                                   "-Dclojure.compiler.direct-linking=true"]
+                        :main-opts ["-e" "(load-file,\"src/script/run_test.clj\")"]}
+  :test-generative-script {:jvm-opts [;; from build.xml
+                                      "-Dclojure.compiler.direct-linking=true"]
+                           :main-opts ["-e" "(load-file,\"src/script/run_test_generative.clj\")"]}
 
   :kaocha {:extra-deps {lambdaisland/kaocha {:mvn/version "1.60.977"}}
            :exec-fn kaocha.runner/exec-fn
