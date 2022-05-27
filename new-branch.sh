@@ -14,9 +14,5 @@ git pull clojure master
 git worktree add ../$BRANCH -b $BRANCH master
 
 cd ../$BRANCH
-mkdir -p .github/workflows
-cp ../build.yml .github/workflows
-cp ../deps.edn .
-cat extra-gitignore >> .gitignore
-git add .github/workflows/build.yml deps.edn
+../cp-actions.sh
 git commit -m "Add Actions build and deps.edn"
