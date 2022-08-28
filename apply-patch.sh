@@ -1,4 +1,8 @@
 #!/bin/sh
+# Apply a patch (from Jira).
+#
+# Usage:
+#  my-branch$ ../apply-patch.sh CLJ-1234-improvement.patch
 set -e
 
 PATCH="$1"

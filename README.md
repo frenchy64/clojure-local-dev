@@ -1,6 +1,21 @@
 # Clojure local dev
 
-A repo to make Clojure's development process easier for me.
+A pull-request based workflow for developing and submitting Clojure patches to Jira.
+
+## Features
+
+- one branch per directory via git worktree structure
+  - [Create new branch](new-branch.sh)
+- [matrix build](build.yml) using GitHub Actions
+  - WIP: deploy to clojars
+- scripts for local dev
+  - [Clojure CLI REPL](repl.sh)
+  - [Kaocha test watcher](watch.sh)
+  - [Run unit tests](test-example.sh)
+  - [Run generative tests](test-generative.sh)
+- script to generate patches for Jira
+  - [Create patch](format-patch.sh)
+  - [Try patch](apply-patch.sh)
 
 ## Setup
 
@@ -12,5 +27,6 @@ A repo to make Clojure's development process easier for me.
 ## Development
 
 1. Create a new branch with `./new-branch.sh`.
-2. Develop branch. Push branch to Clojure fork on GitHub and create a self-PR. Develop until the feature is done and the build passes.
+   - eg., `./new-branch.sh CLJ-123456-my-patch && cd CLJ-123456-my-patch`
+2. Develop patch in this branch. Push branch to your Clojure fork on GitHub and create a self-PR. Develop until the feature is done and the build passes.
 3. In the branch's worktree directory, format a patch via `../format-patch.sh`.
