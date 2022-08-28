@@ -17,6 +17,13 @@ A pull-request based workflow for developing and submitting Clojure patches to J
   - [Create patch](format-patch.sh)
   - [Try patch](apply-patch.sh)
 
+## Background
+
+If you want to contribute to Clojure, familiarize yourself with [Clojure's development process](https://clojure.org/dev/dev).
+
+This repo helps contributors [develop](https://clojure.org/dev/developing_patches#_coding), [submit](https://clojure.org/dev/developing_patches#_adding_patches),
+[screen](https://clojure.org/dev/developing_patches#_screening_a_patch), and [test](https://clojure.org/dev/developing_patches#_run_an_individual_test) patches.
+
 ## Setup
 
 1. Clone [this repo](https://github.com/frenchy64/clojure-local-dev) and `cd` into this directory.
