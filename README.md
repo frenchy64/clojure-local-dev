@@ -2,6 +2,10 @@
 
 A pull-request based workflow for developing and submitting Clojure patches to Jira.
 
+## Example
+
+https://github.com/frenchy64/clojure/pulls
+
 ## Features
 
 - one branch per directory via git worktree structure
