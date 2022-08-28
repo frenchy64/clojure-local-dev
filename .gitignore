@@ -16,5 +16,7 @@ github-user.edn
 !build.yml
 # Allow deps.edn
 !deps.edn
+# Allow github-user.edn.sample
+!github-user.edn.sample
 # Allow extra git ignores
 !extra-gitignore
