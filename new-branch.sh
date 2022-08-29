@@ -9,6 +9,9 @@ if [ -z $BRANCH ]; then
   exit 1
 fi
 
+if [ ! -d "master" ]; then
+  ./clone.sh
+fi
 cd master
 git pull clojure master
 git worktree add ../$BRANCH -b $BRANCH master
