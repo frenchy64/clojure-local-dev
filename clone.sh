@@ -20,15 +20,15 @@ cd master
 (
   set +e
   # https://stackoverflow.com/a/4709925
-  if git remote | grep -Fx "${GITHUB_USER}" ; then
-    git remote remove "${GITHUB_USER}"
+  if git remote | grep -Fx ${GITHUB_USER} ; then
+    git remote remove ${GITHUB_USER}
   fi
-  git remote add "${GITHUB_USER}" "git@github.com:${GITHUB_USER}/clojure.git"
+  git remote add ${GITHUB_USER} "git@github.com:${GITHUB_USER}/clojure.git"
 
   errorCode=$?
   if [ $errorCode -ne 0 ]; then
     echo "ERROR setting up '${GITHUB_USER}' remote, deleting to prevent accidents"
-    git remote remove "${GITHUB_USER}"
+    git remote remove ${GITHUB_USER}
     exit $errorCode
   fi
   
