@@ -12,4 +12,4 @@ GITHUB_USER=$(./github-user.sh)
 cd master
 git reset --hard master
 git pull clojure master --tags
-git push "${GITHUB_USER}" master --tags
+git push ${GITHUB_USER} master --tags
