@@ -13,7 +13,7 @@ if [ ! -d "master" ]; then
   ./clone.sh
 fi
 cd master
-git pull clojure master
+git pull clojure master || true
 git worktree add ../$BRANCH -b $BRANCH master
 
 cd ../$BRANCH
