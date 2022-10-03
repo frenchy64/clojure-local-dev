@@ -1,3 +1,7 @@
+# NEXT
+
+- require `.patch` or `.diff` file extensions for patches
+
 # 1.1.0
 
 - improve generated `.gitignore` for branches to handle nrepl files
