@@ -41,7 +41,7 @@ This repo helps contributors [develop](https://clojure.org/dev/developing_patche
 
 1. Create a new branch with `./new-branch.sh`.
    - eg., `./new-branch.sh CLJ-123456-my-patch && cd CLJ-123456-my-patch`
-2. Develop patch in this branch. Push branch to your Clojure fork on GitHub and create a self-PR. Develop until the feature is done and the build passes.
+2. Develop patch in this branch. Push branch to your Clojure fork on GitHub and create a self-PR via `../open-pr.sh`. Develop until the feature is done and the build passes.
 3. In the branch's worktree directory, format a patch via `../format-patch.sh`.
 
 ## About clojure-local-dev
