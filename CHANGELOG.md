@@ -1,6 +1,7 @@
 # NEXT
 
 - require `.patch` or `.diff` file extensions for patches
+- add `../open-pr.sh` more easily opening self-PR's
 
 # 1.1.0
 

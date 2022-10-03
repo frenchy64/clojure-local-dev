@@ -10,6 +10,8 @@
 #  exit 1
 #fi
 
+set -e
+
 GITHUB_USER=$(cat github-user.edn)
 
 if [[ -z "${GITHUB_USER}" ]]; then
