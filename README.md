@@ -2,6 +2,8 @@
 
 A pull-request based workflow for developing and submitting Clojure patches to Jira.
 
+A good introduction is [Developing Clojure patches with Pull Requests](https://blog.ambrosebs.com/2022/08/29/developing-clojure-patches-with-pull-requests.html).
+
 ## Example
 
 https://github.com/frenchy64/clojure/pulls
@@ -41,3 +43,9 @@ This repo helps contributors [develop](https://clojure.org/dev/developing_patche
    - eg., `./new-branch.sh CLJ-123456-my-patch && cd CLJ-123456-my-patch`
 2. Develop patch in this branch. Push branch to your Clojure fork on GitHub and create a self-PR. Develop until the feature is done and the build passes.
 3. In the branch's worktree directory, format a patch via `../format-patch.sh`.
+
+## About clojure-local-dev
+
+See [CHANGELOG.md](CHANGELOG.md) for version history of this repo. Backwards
+compatibility is preserved when possible, usually it's fine to pull `main` frequently
+but occasionally a tag will be created to mark major "releases".
