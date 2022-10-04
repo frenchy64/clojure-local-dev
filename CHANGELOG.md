@@ -1,3 +1,7 @@
+# NEXT
+
+- add `*.patch` and `*.diff` to gitignore for branches
+
 # 1.2.0
 
 - require `.patch` or `.diff` file extensions for patches

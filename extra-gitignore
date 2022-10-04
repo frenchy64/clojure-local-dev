@@ -1,3 +1,5 @@
 .cpcache
 deps.edn
 .nrepl-*
+*.patch
+*.diff
