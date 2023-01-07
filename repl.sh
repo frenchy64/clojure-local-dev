@@ -13,8 +13,12 @@
 # eg., my-branch$ ../repl.sh
 #
 # See also: https://clojure.org/dev/developing_patches#_run_an_individual_test
+#
+# Notes:
+# - Start a repl with direct linking:
+#   ../repl.sh -J-Dclojure.compiler.direct-linking=true
 
 set -xe
 
 ../prep-clojure-cli.sh
-clj -M:nrepl:dbg
+clj "$@" -M:nrepl:dbg

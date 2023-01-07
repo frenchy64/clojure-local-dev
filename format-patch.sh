@@ -23,6 +23,7 @@ git format-patch master --stdout -U8 -- . ':!.github/workflows/build.yml' ':!dep
 trailing=$(grep --with-filename --line-number '+.*[[:blank:]]$' $patch_file || true)
 if [ -n "$trailing" ]; then
   echo "Trailing whitespace detected in ${patch_file}! Fix this before submission."
+  #FIXME newlines not printed between lines
   echo $trailing
   exit 1
 fi
