@@ -1,5 +1,12 @@
+.clj-kondo
 .cpcache
+.lsp
+.nrepl-port
+.project
+.settings/
+.vim
 deps.edn
 .nrepl-*
 *.patch
 *.diff
+.rebel_readline_history

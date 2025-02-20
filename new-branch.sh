@@ -17,5 +17,5 @@ git pull clojure master || true
 git worktree add ../$BRANCH -b $BRANCH master
 
 cd ../$BRANCH
-../cp-actions.sh
-git commit -m "Add Actions build and deps.edn"
+../cp-actions.sh $BRANCH
+git commit -nm "Add Actions build and deps.edn"
