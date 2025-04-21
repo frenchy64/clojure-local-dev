@@ -3,3 +3,4 @@ deps.edn
 .nrepl-*
 *.patch
 *.diff
+dependency-reduced-pom.xml
