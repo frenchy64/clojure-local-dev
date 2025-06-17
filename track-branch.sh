@@ -13,4 +13,4 @@ cd master
 git worktree add ../$BRANCH $BRANCH
 
 cd ../$BRANCH
-git push --set-upstream frenchy64 $BRANCH
+#git push --set-upstream frenchy64 $BRANCH
